@@ -5,7 +5,7 @@
  * The main loop controls the timing events and gets interrupted by the read_button()-funtion.
  * Otherwise NOKO falls asleep with powerdown_delay() for 120ms. This saves a lot of power.
  * 
- * Flash-Usage: 28.274 (1.8.2 | AVR Core 1.6.18 | Linux x86_64, Windows 10 | Compiler options)
+ * Flash-Usage: 27.844 (1.8.6 | AVR Core 1.6.18 | Linux x86_64, Windows 10 | Compiler options)
  * 
  * Optional:
  * Compiler Options:   -funsafe-math-optimizations -mcall-prologues -maccumulate-args
@@ -152,11 +152,7 @@
 #define mp3_busy        (analogRead(1)>1) // Busy=HIGH?
 
 // Libraries
-#include <avr/power.h>
-#include <avr/wdt.h>
-#include <avr/sleep.h>
 #include <Wire.h> 
-#include <EEPROM.h>
 #include "Time.h"
 #include "LiquidCrystal_I2C.h"
 #include "Si4703.h"
@@ -2483,4 +2479,3 @@ void write_EEPROM(uint8_t address, uint8_t data) // Write internal EEPROM with o
 {
   EEPROM.update(address+offset,data);
 }
-

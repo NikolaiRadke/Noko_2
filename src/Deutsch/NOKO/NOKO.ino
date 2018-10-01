@@ -1,11 +1,11 @@
- /* NOKO V2.0 30.04.2018 - Nikolai Radke
+/* NOKO V2.0 30.04.2018 - Nikolai Radke
  *
  * Sketch for NOKO-Monster - Deutsch
  * NOTE: Does NOT run without the Si4703 Radio Module! Uncommend line 88 if it's not present.
  * The main loop controls the timing events and gets interrupted by the read_button()-funtion.
  * Otherwise NOKO falls asleep with powerdown_delay() for 120ms. This saves a lot of power.
  * 
- * Flash-Usage: 28.490 (1.8.2 | AVR Core 1.6.18 | Linux x86_64, Windows 10 | Compiler options)
+ * Flash-Usage: 28.028 (1.8.6 | AVR Core 1.6.18 | Linux x86_64, Windows 10 | Compiler options)
  * 
  * Optional:
  * Compiler Options:   -funsafe-math-optimizations -mcall-prologues -maccumulate-args
@@ -106,7 +106,7 @@
 // Developer options
 #define pwd_delay     50  // Button debounce
 #define reaction_time 70  // Startup time for the amplifier
-#define sensor        25  // Ultrasonic: with cover 10, without 25
+#define sensor        10  // Ultrasonic: with cover 10, without 25
 #define vol_mp3       30  // JQ6500 volume 0-30
 #define vol_radio     10  // Si4703 volume 0-15
 #define def_sysinfo       // Sysinfo menu. Comment out for additional 640 bytes
@@ -462,7 +462,6 @@ while(1)
       { 
         distance_off=!distance_off;
         draw_time();
-        event();
       }
       break;
     case 3:                                   // Left: toggle display & power save
@@ -771,7 +770,7 @@ void NOKO_sleep(uint8_t wdt_time) // Sleepmode to save power
   else if (lcd_off) set_sleep_mode(SLEEP_MODE_PWR_DOWN);  // Highest level
   else set_sleep_mode(SLEEP_MODE_STANDBY);             // Lower level to wake up faster
   sleep_enable();
-  sleep_bod_disable();                                 // No brown-out detection
+//  sleep_bod_disable();                                 // No brown-out detection
   power_adc_disable();                                 // No need for ADC during sleep
   sleep_cpu();                                         // power down!
   sleep_disable();                                     // Good morning
@@ -783,13 +782,13 @@ void NOKO_sleep(uint8_t wdt_time) // Sleepmode to save power
 void powerdown_delay(uint8_t ms) // Calls NOKO_sleep() with watchdog-times
 // Sleep times steps are pre-defined, max 8s
 {
-  if (lcd_dimm)  PRR = PRR | 0b00100000;           // Workaround. Not sure if IDLE is working...
+  //if (lcd_dimm)  PRR = PRR | 0b00100000;           // Workaround. Not sure if IDLE is working...
   // if (ms>=256) {NOKO_sleep(WDTO_250MS); ms-=250;} // NOKO uses max 240ms
   if (ms>=128) {NOKO_sleep(WDTO_120MS); ms-=120;}
   if (ms>=64) {NOKO_sleep(WDTO_60MS); ms-=60;} 
   if (ms>=32) {NOKO_sleep(WDTO_30MS); ms-=30;}
   if (ms>=16) {NOKO_sleep(WDTO_15MS); ms-=15;}
-  if (lcd_dimm) PRR = PRR & 0b00000000;            // End workaround. Stupid stupid Atmel!
+  //if (lcd_dimm) PRR = PRR & 0b00000000;            // End workaround. Stupid stupid Atmel!
 }
 
 void read_RTC() // Read RTC and store time
@@ -2522,6 +2521,3 @@ void write_EEPROM(uint8_t address, uint8_t data) // Write internal EEPROM with o
 {
   EEPROM.update(address+offset,data);
 }
-
-
-

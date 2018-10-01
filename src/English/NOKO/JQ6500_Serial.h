@@ -32,8 +32,6 @@
 #ifndef JQ6500Serial_h
 #define JQ6500Serial_h
 
-#include <SoftwareSerial.h>
-
 #define MP3_EQ_NORMAL     0
 #define MP3_EQ_POP        1
 #define MP3_EQ_ROCK       2
@@ -406,34 +404,3 @@ class JQ6500_Serial : public SoftwareSerial
 };
 
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
