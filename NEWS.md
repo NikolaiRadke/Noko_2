@@ -1,6 +1,13 @@
 # Newsblog
 
 ## 2018  
+* **20.11.2018** Small improvements for write_eeprom tool. Thanks to jlegen.  
+* **19.11.2018** New IDE 1.8.7 tested. Works with new AVR Core 1.6.23. Finally.  
+* **26.08.2018** See NOKO and me at Wissensnacht Ruhr Gelsenkirchen: 28.08.2018.  
+* **25.08.2018** New IDE 1.8.6 is out! Together with old AVR Core 1.6.18 code size is reduced by about 400 bytes!  
+* **24.08.2018** See NOKO and me at the Maker Faire Hannover: 15.09.2018-16.09.2018.  
+* **14.05.2018** See NOKO and me at the Maker Faire Berlin: 25.05.2018-28.05.2018, FEZ!  
+* **11.05.2018** The female voice set ist finished.  
 * **30.04.2018** Firmware **X.0-300418** Slightly optimized random generator.  
 * **26.04.2018** Good news: The 3D printable casing is ready! Stay tuned for a new 2.0 repository!  
 * **06.04.2018** Firmware **X.0-060418** When uploading files NOKO should be quiet. The equalizer menu sets NOKO in upload mode.  
