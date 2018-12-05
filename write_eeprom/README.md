@@ -1,4 +1,4 @@
-# Setting up a serial connection and writing to EEPROMs
+# Setting up a serial connection and writing to EEPROM
 
 Open the NOKO writer sketch **NOKO_EEPROM.ino** in the Arduino IDE and start it. You can see the progress on your console.  
 
