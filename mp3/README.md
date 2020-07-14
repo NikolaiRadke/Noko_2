@@ -1,7 +1,7 @@
-# Male voice set for NOKO - German | enhanced 226 files Version
+# Voice set for Noko - German
 
 Copy these mp3s into the folder **001** on your microSD card. Strictly observe the sequence!
-021.mp3 must be copied as the 21st file. See the [Wiki](https://github.com/NikolaiRadke/NOKO/wiki/SDKarte) for more detailed instructions.
+021.mp3 must be copied as the 21st file. See the [Wiki](https://github.com/NikolaiRadke/Noko_2/wiki/SDKarte) for more detailed instructions.
 
 
 | Number  | Assignment               |
@@ -13,5 +13,8 @@ Copy these mp3s into the folder **001** on your microSD card. Strictly observe t
 | 151-225 | Time based events        |
 | 226     | Birthday song            |
 
-011-225 have been spoken by my fellow actor [Carsten Caniglia](https://filmmakers.de/carsten-caniglia). Why? 
-He has done a great job - moreover I don't want to listen to my own voice every day, especially when development takes more than a year! (Ian said I sound really weird in real life. Thanks, mate.)
+The male Noko was spoken by my fellow actor [Carsten Caniglia](https://filmmakers.de/carsten-caniglia). Why? 
+He has done a great job - moreover I don't want to listen to my own voice every day, especially when development takes more than a year! (Ian said I sound really weird in real life. Thanks, mate.)  
+  
+The female Noko was spoken by [Norma Anthes](https://norma-anthes.de/Norma_Anthes/).  
+  
