@@ -1,4 +1,4 @@
-# ![Noko](http://www.nikolairadke.de/NOKO/noko_back.jpg)  
+![Noko](http://www.nikolairadke.de/NOKO/noko_back.jpg)  
   
 **Note: This Repository is getting a rework.**
 
